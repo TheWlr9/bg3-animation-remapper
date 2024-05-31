@@ -1,7 +1,6 @@
 from lxml import etree
 import os
 import uuid
-from shutil import rmtree
 
 #-MODIFY-CONSTANTS-BELOW-THIS-LINE-----------------------------------------------------------------------------------
 NEW_RESOURCE_NAME = "Block_Base"
