@@ -65,9 +65,10 @@ KEY_REPLACEMENT_MAP = [ # (<VisualObject_MapKey>, <Animation_SubSet>, <Animation
 ]
 
 SHOULD_DELETE_PARSED_FILES = True
+OVERRIDE_DYNAMIC_ANIMATION_TAG = ""
 #-DO-NOT-MODIFY-ANY-CODE-BELOW-THIS-LINE-UNLESS-YOU-REALLY-KNOW-WHAT-YOU'RE-DOING------------------------------------
 
-dynamic_animation_tag = ""
+dynamic_animation_tag = OVERRIDE_DYNAMIC_ANIMATION_TAG
 list_of_affected_characters = []
 
 def _insert_block_animation(root_parent_element, animation_uuid, animation_subset_key, object_key):
@@ -311,7 +312,8 @@ def update_animation_set_priorities(animation_priorities_path, animation_name, p
     tree.write(animation_priorities_path, pretty_print=True, xml_declaration=True, encoding="utf-8")
 
 if __name__ == "__main__":
-    dynamic_animation_tag = uuid.uuid4()
+    if dynamic_animation_tag == "": # If it hasn't been overridden.
+        dynamic_animation_tag = uuid.uuid4()
     num_files = 0
     for root, dirs, files in os.walk(DIRECTORY_FOR_MODIFYING):
         num_files += len(files)

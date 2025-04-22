@@ -31,6 +31,8 @@ A tool for Baldur's Gate 3 modding that helps with remapping animations to visua
       Note that all the elements are UUIDs.
    - `SHOULD_DELETE_PARSED_FILES` This flag can be set to `True` or `False`. If `True`, it will delete the file it obtained the animation data
       from, after it finished generating the added file for that character.
+   - `OVERRIDE_DYNAMIC_ANIMATION_TAG` Keep this as-is ("") for most cases. If you set it to a uuid, it will force the tool to use that
+      dynamic animation tag instead of generating a new one.
 6. Run the script with no arguments (`python ./animationKeyRemapper.py`). **This will do all the annoying work for you and print out your Dynamic Animation Tag
    for you to copy and paste wherever you wish to use it** (typically you'd use it in a status definition)!
 
