@@ -321,9 +321,10 @@ if __name__ == "__main__":
         num_files += len(files)
     recurse_through_directory(DIRECTORY_FOR_MODIFYING, num_files)
 
-    if !overridden_dynamic_animation_tag:
+    if not overridden_dynamic_animation_tag:
         update_animation_set_priorities(ANIMATION_PRIORITIES_FILE_PATH, NEW_RESOURCE_NAME, PRIORITY)
 
 
     print(f"\r\033[KComplete! Here's your DynamicAnimationTag: {dynamic_animation_tag}")
+
 
