@@ -312,13 +312,17 @@ def update_animation_set_priorities(animation_priorities_path, animation_name, p
     tree.write(animation_priorities_path, pretty_print=True, xml_declaration=True, encoding="utf-8")
 
 if __name__ == "__main__":
+    overridden_dynamic_animation_tag = True
     if dynamic_animation_tag == "": # If it hasn't been overridden.
         dynamic_animation_tag = uuid.uuid4()
+        overridden_dynamic_animation_tag = False
     num_files = 0
     for root, dirs, files in os.walk(DIRECTORY_FOR_MODIFYING):
         num_files += len(files)
     recurse_through_directory(DIRECTORY_FOR_MODIFYING, num_files)
 
-    update_animation_set_priorities(ANIMATION_PRIORITIES_FILE_PATH, NEW_RESOURCE_NAME, PRIORITY)
+    if not overridden_dynamic_animation_tag:
+        update_animation_set_priorities(ANIMATION_PRIORITIES_FILE_PATH, NEW_RESOURCE_NAME, PRIORITY)
+
 
     print(f"\r\033[KComplete! Here's your DynamicAnimationTag: {dynamic_animation_tag}")
