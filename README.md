@@ -40,4 +40,4 @@ For an example of a mod that used this, I used it for my own mod "[Bliss (Block 
 to view the source of it. I have left the constants to how they are with that mod in the script uploaded here so you can try to follow along if you wish, and also
 because it's easy for me lol because it both shows how to properly format the constants, as well as what they should look similar to.
 
-If you have any questions on how to use it still, then feel free to contact me through DM on Discord (thewhirlwind9) :)
+If you have any questions on how to use it still, then feel free to contact me through DM on Discord (luigigoomba) :)
